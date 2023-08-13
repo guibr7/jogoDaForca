@@ -1,0 +1,346 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+  
+  @font-face {
+    font-family:'Roboto Mono', monospace; ;
+    src: url(../Fonts/RobotoMono-Regular.ttf);
+  }
+:root{
+  --corBackgroundPag: #282c34;;
+  --corTextoBotoes: #212121;
+  --corTextoPagina: #ffff;
+  --corBarrasForca: #ffff;
+  --corLetrasForca: #ffff;
+  --corFundoBotoes:#61dafb;
+  --corFundoModalWin:#f2f2f2;
+  --corFundoModalLoser:#F2766B;
+  --corfundoBotaoModalLoser: #403332;
+  --RobotoNormal:'Roboto Mono', monospace;
+  --RobotoSerif: 'Roboto Serif';
+  --fontePagina: Arial, Helvetica, sans-serif;
+  --fonteBotoes:
+}
+
+
+body{
+  background-color: var(--corBackgroundPag);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-color: rgb(0, 0, 0);
+  color: #f7fdff;
+  font-size: 3em;
+  text-align: center;
+  height: 60px;
+  padding: 5px;
+}
+
+#tempo{
+  color: var(--corTextoPagina);
+  text-align: center;
+  font-size: 45px;
+  max-height: 37px;
+  height: 60px;
+  user-select: none;
+  margin-top: 10px;
+  font-family: var(--RobotoNormal);
+}
+
+.containerG{
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top:28vh;
+  user-select: none; 
+  border: solid 1px rgb(239, 0, 199);
+  
+}
+
+.BarrasLetra{ 
+  /*Classe das letras da palavra / Cada letra é um parágrafo */     
+  width: 70px;
+  height: 45px;
+  margin: 10px;
+  border:solid;
+  border-width: 5px;
+  border-radius: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  font-size: 40px;
+  /*color: var(--corLetrasForca);*/
+  color: var(--corBarrasForca);
+   font-family: var(--RobotoNormal);
+  margin-top: 10px;
+  border-color:var(--corBarrasForca);
+  text-transform: uppercase;
+}
+
+.teclado{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 19vh;
+  user-select: none; 
+  border: solid 1px greenyellow;
+  max-width: 720px;
+}
+
+.letra{ 
+  font-size: 1.4em;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  min-width:48px;
+  height: 48px;
+  cursor: pointer;
+  background-color: var(--corFundoBotoes);
+  color: var(--corTextoBotoes);
+  border: none;
+  border-radius: 6px;
+  font-weight:bolder;
+}
+
+.letra:hover{
+    animation: hoverTeclado 0.2s forwards;
+    animation-delay: none;
+}
+
+.letra:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+@keyframes hoverTeclado {
+    to{
+       background-color: rgb(246, 246, 246);
+    }
+}
+
+#modalWin{
+  margin: auto;
+  width: 350px;
+  height: 580px;
+  padding: 10px;
+  background-color:var(--corFundoModalWin );
+  border: 1px solid #E6E6E6;
+  box-shadow: 4px 4px 5px #1a1a1aa8;
+}
+
+#modalWin::backdrop{
+  background-color: #39393954;
+}
+
+#modalLoser::backdrop{
+  background-color: #1c1c1cc5;
+}
+
+.fecharDialog {
+  border: none;
+  text-align: center;
+  height: 15px;
+  width: 15px;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #CCCCCC;
+  font-size: 0.6em;
+  font-weight: bold;
+  color: black;
+ font-family: var(--fontePagina);
+  transition: all 0.5s;
+  -webkit-transition: all 0.1s;
+}
+
+.fecharDialog:hover {
+  background-color: #F24B6A;
+  box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.mensagemWin > h1{
+  text-align: center;
+  margin-top: 1px;
+  font-size: 45px;
+  font-family: var(--fontePagina);
+}
+
+.mensagemWin > h2{
+  text-align: center;
+  font-family: var(--fontePagina);
+  margin-top: 5px;
+  font-size: 18px;
+  color: #595959;
+  margin-bottom: 60px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+#resposta{
+  font-size: 35px;
+  font-family: var(--RobotoNormal);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#lgdPontuacao{
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 35px;
+  font-family: var(--fontePagina);
+  font-weight: lighter;
+}
+
+#pontuacao{
+  font-size: 35px;
+  text-align: center;
+  font-family: var(--fonteBotoes);
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+#modalLoser{
+  margin: auto;
+  width: 350px;
+  height: 580px;
+  padding: 10px;
+  background-color: var(--corFundoModalLoser);
+  border: 0.5px solid var(--corTextoBotoes);
+  box-shadow: 4px 4px 5px #1a1a1aa8;
+}
+
+#areaBotoesLoser{
+  height: 80vh;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ /* border: 2px solid #17A671;*/
+}
+
+.botoesModalLoser{
+  background-color: var(--corfundoBotaoModalLoser);
+  color: var(--corTextoPagina);
+  border-radius: 13px;
+  padding: 8px;
+  margin-top: 28px;
+  font-weight:bold ;
+  font-family: var(--fontePagina);
+  text-align: center;
+  font-size: 1.03em;
+  text-transform: uppercase;
+  width: 180px;
+  text-decoration: none;
+}
+
+@keyframes hoverTeclado {
+  to{
+    color: var(--corTextoPagina);
+    background-color: var(--corTextoBotoes);
+  }
+}
+.botoesModalLoser:hover{
+  animation: hoverTeclado 0.2s forwards;
+  animation-delay: none;
+}
+.botoesModalLoser:active {
+box-shadow: none;
+transform: translate(2px, 2px);
+}
+
+.barraProgressoChute{
+  width: 250px;
+  height: 100px;
+  padding: 2px;
+  margin: auto;
+}
+
+.chuteCerto{
+  display:inline-block;
+  width: 18px;
+  height:18px;
+  border-radius: 3px;
+  background-color: #17A671;
+  margin: 1px;
+}
+
+.chuteErrado{
+  display:inline-block;
+  width: 18px;
+  height:18px;
+  border-radius: 3px;
+  background-color: #F24B6A;
+  margin: 1px;
+}
+
+.dados > p{
+  font-size: 0.9em;
+  margin-bottom: none;
+}
+
+#areaBotoes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.botoesModal{
+  font-size: 1.05em;
+  text-transform: uppercase;
+  width: 110px;
+
+  text-decoration: none;
+  background-color: var(--corFundoBotoes);
+  color: var(--corTextoBotoes);
+
+  border-radius: 13px;
+  padding: 6px;
+  margin-top: 28px;
+
+  font-weight:bold ;
+  font-family: var(--fontePagina);
+  text-align: center;
+}
+
+@keyframes hoverTeclado {
+  to{
+    color: white;
+    background-color: var(--corTextoBotoes);
+  }
+}
+.botoesModal:hover{
+  animation: hoverTeclado 0.2s forwards;
+  animation-delay: none;
+}
+.botoesModal:active {
+box-shadow: none;
+transform: translate(2px, 2px);
+}
+
+.linha1{
+  border: solid 1px orange;
+  min-width: 100%;
+  min-width: 1%;
+  text-align: center;
+}
+.linha2{
+  border: solid 1px orange;
+  min-width: 100%;
+  min-width: 1%;
+  text-align: center;
+}
+.linha3{
+  border: solid 1px orange;
+  min-width: 100%;
+  min-width: 1%;
+  text-align: center;
+}

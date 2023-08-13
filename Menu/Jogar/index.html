@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <main>
+        <div>
+            <p id="tempo"> 0:00 </p>
+        </div>
+        <div class='containerG'>
+        </div>
+        
+        <div class="teclado">
+            <div class="linha1">
+                <button onclick="comecarJogo(valorBotao = 'q')" value='Q' class='letra'id='q'> Q</button>
+                <button onclick="comecarJogo(valorBotao = 'w')" value='W' class='letra'id='w'> W</button>
+                <button onclick="comecarJogo(valorBotao = 'e')" value='E' class='letra'id='e'> E </button>
+                <button onclick="comecarJogo(valorBotao = 'r')" value='R' class='letra'id='r'> R</button>
+                <button onclick="comecarJogo(valorBotao = 't')" value='T' class='letra'id='t'> T</button>
+                <button onclick="comecarJogo(valorBotao = 'y')" value='Y' class='letra'id='y'> Y</button>
+                <button onclick="comecarJogo(valorBotao = 'u')" value='U' class='letra'id='u'> U</button>
+                <button onclick="comecarJogo(valorBotao = 'i')" value='I' class='letra'id='i'> I</button>
+                <button onclick="comecarJogo(valorBotao = 'o')" value='O' class='letra'id='o'> O</button>
+                <button onclick="comecarJogo(valorBotao = 'p')" value='P' class='letra'id='p'> P</button>
+            </div>
+            <div class="linha2">
+                <button onclick="comecarJogo(valorBotao = 'a')   " value='A' class='letra'id='a'> A </button>
+                <button onclick="comecarJogo(valorBotao = 's')" value='S' class='letra'id='s'> S</button>
+                <button onclick="comecarJogo(valorBotao = 'd')" value='D' class='letra'id='d'> D </button>
+                <button onclick="comecarJogo(valorBotao = 'f')" value='F' class='letra'id='f'> F</button>
+                <button onclick="comecarJogo(valorBotao = 'g')" value='G' class='letra'id='g'> G</button>
+                <button onclick="comecarJogo(valorBotao = 'h')" value='H' class='letra'id='h'> H</button>
+                <button onclick="comecarJogo(valorBotao = 'j')" value='J' class='letra'id='j'> J</button>
+                <button onclick="comecarJogo(valorBotao = 'k')" value='K' class='letra'id='k'> K</button>
+                <button onclick="comecarJogo(valorBotao = 'l')" value='L' class='letra'id='l'> L</button>
+            </div>
+        
+           <div class="linha3">
+                <button onclick="comecarJogo(valorBotao = 'z')" value='Z' class='letra'id='z'> Z</button>
+                <button onclick="comecarJogo(valorBotao = 'x')" value='X' class='letra'id='x'> X</button>
+                <button onclick="comecarJogo(valorBotao = 'c')" value='C' class='letra'id='c'> C </button>
+                <button onclick="comecarJogo(valorBotao = 'v')" value='V' class='letra'id='v'> V</button>
+                <button onclick="comecarJogo(valorBotao = 'b')" value='B' class='letra'id='b'> B </button>
+                <button onclick="comecarJogo(valorBotao = 'n')" value='N' class='letra'id='n'> N</button>
+                <button onclick="comecarJogo(valorBotao = 'm')" value='M' class='letra'id='m'> M</button>
+            </div>
+        </div>
+        <dialog id="modalWin" > 
+            <button onclick='fecharModal()' class='fecharDialog'>X</button>
+            <div class="mensagemWin"> 
+                <h1>Parabéns</h5>
+                <h2 id="fraseVitoria">Você é fera!</h6>
+            </div>
+
+            <div class="estatisticasPartida">
+                <p id="resposta"> teste </p>
+
+                <p id="lgdPontuacao">Pontuação:</p>
+                <p id="pontuacao"></p>
+                <div class="barraProgressoChute">
+                </div>
+
+                <div class='dados'>
+                    <p id="tempoGasto">Tempo gasto: 00</p>
+                    <p id="numTentatv">Número de tentativas: 00</p>
+                </div>
+
+                <div id="areaBotoes"> 
+                    <a target="_self" href="#" rel="next" id="proximo" class="botoesModal" onclick="window.location.reload();"> próxima</a>
+                    <a target="_self" href="../index.html" rel="prev" id="voltarMenu" class="botoesModal">menu</a>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="modalLoser">
+            <div id="areaBotoesLoser"> 
+                <a title="Jogar novamente" onclick="window.location.reload();" target="_self" href="#" rel="next" class="botoesModalLoser">tentar novamente</a>
+
+                <a target="_self" href="../index.html" rel="prev" class="botoesModalLoser">menu</a>
+            </div>
+        </dialog>
+    </main>
+ <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div id="principalMain">
+            <p id="titulo">forca</p> <span>BETA</span>
+            <div class="botaoMenu_pai">
+                <a title="Jogar" href="Jogar/index.html" target="_self" rel="next" class="botaoMenu" id="jogar" > jogar </a>
+            </div>
+        </div>
+        <div class="infoDiv">
+            <div class="botExt_pai">
+                <button onclick=" abrirModalAjuda()" title="Ajuda" class="botaoExt" id="botAjd">?</button>
+                <button onclick="abrirModalinfo()" title="Informações" class="botaoExt" id="botInfo">ℹ️</button>
+            </div>
+        </div>
+        <dialog  class="modalMenu" id="modalAjuda">
+            <button onclick="fecharModalAjuda()"  class='fecharDialog'>X</button>
+            <div id="modalAjudaPai">
+                <h1>Como jogar?</h1>
+                <p>
+                    <strong>
+                        Adivinhe a palavra proposta em 2 minutos. <br> <br>
+                        Se o(a) jogador(a) não conseguir identificar a palavra durante esse tempo, perde. <br> <br>
+                        Diferente do jogo tradicional, não há limite de tentativas, o jogador(a) pode arriscar quantas letras quiser. <br>
+                        A tentativa incorreta e a demora fazem com que o jogador(a) perca pontos. <br> <br>
+                        A pontuação máxima é de 10 pontos <br>
+                        Caso o(a) jogador(a) vença, será exibido:
+                    </strong>
+                    <ul>
+                        <li>Palavra correta.</li>
+                        <li>Pontos obtidos durante a jogada.</li>
+                        <li>Histórico de tentativas.</li>
+                        <li> Tempo gasto para acerto da palavra.</li>
+                        <li> Número de tentativas.</li>
+                    </ul>
+                    <strong>Acentos e sinais gráficos não são reconhecidos</strong>
+                    <ul> 
+                        <li>  Acento agudo( ´ ).</li>
+                        <li> Acento grave ( ` ).</li>
+                        <li> Acento circunflexo ( ^ ).</li>
+                        <li>  Til ( ~ ).</li>
+                    </ul>
+                    <strong>Todas as palavras pertencem à língua portuguesa.</strong>
+                </p>
+            </div>
+        </dialog>
+        <!--<dialog class="modalMenu" id="info">
+            <button onclick='fecharModalInfo()' class='fecharDialog'>X</button>
+            <div id="modalInfoPai">
+                <div id='logo'>
+                    <img src="android-chrome-192x192.png" alt="">
+                </div>
+                <div ConteudoInfoPai>
+                    <p>
+                        Adivinhe a palavra proposta em partidas rápidas realizando tentativas num tempo desafiador. Receba pontos pela sua habilidade e mostre sua estatística para amigos e familiares. Aprenda novas palavras jogando e se divertindo.
+                    </p>
+                </div>
+            </div>
+        </dialog>-->
+
+    </main>
+    <footer>
+        <div id="versaoPai">
+            <span id="versao">v1.0.0beta</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
